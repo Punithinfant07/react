@@ -1,0 +1,373 @@
+Html 4
+HTML 4 totally depends on div tag -- div empty container
+
+HTML 5
+HTML 5 HAS SEMENTIC ELEMENTS
+SUCH AS 
+HEADER
+SECTION 
+FOOTER
+NAV
+ASIDE
+ARTICLE 
+
+LIST :
+ 1. Ordered LIST
+ 2. Unordered LIST
+
+ <li>
+ li is a child tag for both , Ol(order list) as well UL (Unordered list)
+
+ static & Dynamic
+
+static 
+1.if a project is developed without backend- integrated known as static project
+
+Dynamic
+1.if a project is developed with  backend- integrated known as Dynamic project
+
+work with same faster
+
+dashed means it gives ----- surrounded outline
+
+border : double means _________________ outline doubled
+
+
+ display: inline-block; = means it gives you all list in an identical single line
+
+
+ Margin & Padding
+
+ Form controls
+ 1.textbox
+ 2.password
+ 3.checkbox
+ 4.radiobutton
+ 5.select
+ 6.email
+7. file
+ 8.date
+ 9.time
+  10.submit
+
+
+  <br> breaking the line of each line
+
+  section --
+
+  ctr + back slash means comment
+
+  Table
+  1.Thead 
+
+a.we can use thead heading of our Table
+b. thead is a parent of <th>
+
+2. tbody
+we can use tbody for body of our Table
+
+3. <tr> table row
+a.we use tr for rows of our table
+b.row must be defined before defining data of a table
+
+4.<tb> tadle data
+a.weuse td for data(values) of our table inside <tbody>
+
+form button submit pop table
+
+pro frm wrk hst 
+
+replacement
+
+cookies (2mb approx)
+
+webstorage (10-15mb approx)
+1. local storage
+
+one to many transaction
+ 
+  it is one to one transaction
+
+fov icon
+
+
+img
+1.used to embed images(JPG,PNG,GIF,ect..)
+2.not interactive-just display the images
+3.lightweight- loads fast
+4.cannot load HTML ,vidios, or external sites
+5.no security risks involved
+
+iframe
+1.used to embed external cotent or full web pages
+2.can embed videos,maps,forms,even other websites
+3.fully interactive - user can scroll, click, play,ect..
+4.heavier then <img>-may affect performance
+
+bootstrap
+
+UTC-8
+1.unicode transformation format is used as 8-bit in html-5, to make our site globally readable and adaptable.
+2.UTC-8 is used to encode all the characters is the world. It is used to encode all.
+3.amoung 8-bits english is occupied as 1-bit.
+4.Meta tags are used for SEO purpose (search-engine-optimization).
+5.In html-4 we have UTF as 4 bit(UTF-4) i.e can be used only for single language.
+6.In html-5 we have UTF-8 i.e can be used for multipul language. 
+
+RWd
+(responsive web design)
+
+SEO (search engine optimization)
+1<meta>
+meta tag is used to define the content of the SEO.
+we use content as
+
+primary 
+1.title (It is a 30-65 characters page title)
+2.description (It is a 120-320 characters page description)
+3.keywords
+
+secondary
+4.robots tag
+5.publisher
+6.author
+
+RWD 
+responsive web design
+1.bootstrap will adjust components based on the screen size
+
+1.layout
+2.Grid system
+
+Layout Examples:-
+
+Mobile <576px
+Mobile large screen >= 576px
+Tablets >= 768px
+Laptaps>=992px
+Destop/Projectors>= 1200px
+
+Grid system works on 12 columns system i.e need call the col between 12 only
+like 
+col-sm-2
+col-md-8
+col-sm-2
+
+
+These column should be called inside a row.
+
+whenever we call a row a column should also be called accordingly.
+we cant call row inside a row & column inside a column.
+
+
+                Extra small 	 Small   	  Medium   	 Large    	Extra large  
+                 <576px        ≥576px      ≥768px     ≥992px     ≥1200px
+.container       	100%	       540px	     720px	     960px	     1140px
+.container-sm	    100%	       540px	     720px	     960px	     1140px
+.container-md	    100%	       100%	       720px	     960px	     1140px
+.container-lg	    100%	       100%	       100%	       960px	     1140px
+.container-xl	    100%	       100%	       100%	       100%	       1140px
+.container-fluid	100%	       100%	       100%	       100%	       100%
+
+
+
+Array of Object
+
+
+js function 
+function syntax
+
+key points
+1.funiction 
+
+
+
+
+
+
+js events
+
+1.onclick
+2.onmouseout
+3.onmouseover
+4.onkeydown
+5.onkeyup
+6
+
+
+CRUD
+1.create
+2.read
+3.update
+4.delete
+
+
+Alert
+opens a alert popup
+
+prompt
+open a pop up with filed as prompt
+
+operators
+
+1.Arithmetic operators = used for mathemtical calculation
+
+    operator |   description   |  example  |result
+a.     +       Addition            5+3 = 8
+b.     -       subraction          5-3 = 2
+c.     *      Multipication        5*3 = 15
+d.     /        division           5/2 = 2.5
+e.     %     modulus (remainder)   5%2 = 1
+f.     **     Exponentiation       5**2 = 25 
+g.     ++       Increment          let x =5;x++6
+h.     --       decrement          let x =5;x--4
+
+
+2.Assignment Operators=used to assign values to variables.
+
+    operator |   description   |  example  |result
+a.     = Assignment x=10
+b.     += Add and Assign x += 5 x=x+5
+c.     -= subtract and assign
+d.     *= Multiply and Assign
+e.    /= Divide and assign
+f. %=  modulus and assign
+g. **= Exponentiation assign
+
+
+3. Comparison Operator = used to compare two values.
+
+    operator |   description   |  example  |result
+a.(==). Equal to 5    =="5" true
+b. (===). strict equal
+c. ===    (type+value)      5==="5" false
+d. !=  NOT equal           5!="5"   false
+e. !==   strict not equal  5!=="5".  true
+f. >     Greater then         5>3     true
+g. <      less then           5<3     false
+h. >=     Greater then equal     5>=3   true
+i. <=        less then equal    5<=3     false
+
+
+4. Logical operators = used for logical operation
+
+    operator |   description   |  example  
+a.    &&          logical          AND
+b.    '           logical          OR
+c.    !           logical          NOT
+
+
+5. string Operators = used to manipulation strings.
+
+    operator |   description   |  example      | result
+a. + string Concatenation        "hello"+"World"
+b. +=.    Concatenation assign   let
+
+Git basic Commands
+
+1. git status
+to check the status of the local changes
+
+2. git add
+to add all the files in the local changes
+
+3. git commit -m "message"
+
+4. git log
+to view the commit history
+
+5. git branch
+to view the branches
+
+6. git branch -a
+to view all the branches
+
+7. git checkout branch-name
+to switch to a branch
+
+8. git merge branch-name
+to merge a branch
+
+9. git push origin branch-name
+to push the change to the remote repository
+
+10. git pull origin branch-name
+to pull the changes from the remote repository
+
+11. git remote -v
+to view the remote repository
+
+
+when a new repo is created to push the code into it
+
+1. to initailize .get into the project 
+git init
+
+2. to add a readme file into the git
+git add README. md
+
+3. to add all the files in the current directory
+git add.
+
+4. to commit all the changed into the git
+git commit -m "first commit"
+
+5. to create a branch for the local changes
+git branch -M main
+
+6. to add the git account to project with repo link
+git remote add origin https://github.com/Punithinfant07/demo
+
+7. to push the code into the branch either push or publish
+git push -u orgin main
+
+8. whenever a new branch is created that need to be published to have it into the repo else it will be in the local only.
+
+
+1. a++
+2. ++a
+
+let[1,2,3,4,5,6,7,8]
+
+
+1. push
+adding (inserting) into the current array
+
+2. pop
+
+
+Feature                          old javascript(before ES6)               Modern javascript (ES6 and After)
+
+variable declaration             var(funtion-scoper,can cause bugs)       let,const(block-scoped,safer)
+
+function                         only regular functions: function f(){}   arrow funtions : const f =() => {}
+(shoryter & no this binding)
+
+strings                          concatenation using +                     template literals:'hello $(name)'
+
+objects.                         basic objects                             shorthend properties & methods :(name,greet() {})
+
+modules                         no bull-it modules; relied on heck/manual loading    
+
+react-js
+1. it is a javascript libarary
+2. react js is used to create ui components
+3. virtual DOM support
+4. its very fast and porformance
+5. single page application (SPA) development
+6. component based architecher
+7. server side rend
+
+setup
+
+1. navigate to project folder/directory
+cmd : cd foldername
+
+2. how to create react setup
+cmd: npm install create-react app
+
+3. hwo to create react setup
+cmd: npx create-react-app projectname
+
+4. run/execute react project
+cmd: npm start

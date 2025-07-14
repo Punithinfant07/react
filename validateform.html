@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <section>
+        <form id="myform">
+            First Name : <input type="text" id="first_name" required /> <br />
+            Last Name : <input type="text" id="last_name" required /><br />
+            Email : <input type="email" id="my_email" required /><br />
+            Password : <input type="password" id="pass" required /><br />
+            Confirm Password : <input type="password" id="confpass" required /><br />
+            <input type="button" value="Submit" onclick="validateForm()" />
+            <input type="button" value="Clear" onclick="clearform()" />
+            <input type="button" value="Update" onclick="updateuser()" />
+        </form>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+        <div id="displaymsg"></div>
+    </section>
+
+    <script>
+        var users = [];
+        var arrayindex = -1;
+
+        function validateForm() {
+            var FirstName = document.getElementById("first_name").value;
+            var LastName = document.getElementById("last_name").value;
+            var Email = document.getElementById("my_email").value;
+            var Password = document.getElementById("pass").value;
+            var ConfirmPassword = document.getElementById("confpass").value;
+
+            var msg = document.getElementById("displaymsg");
+
+            if (FirstName === "")
+                msg.innerHTML = '<span style="color: red;">First Name is required</span>';
+            else if (LastName === "")
+                msg.innerHTML = '<span style="color: red;">Last Name is required</span>';
+            else if (Email === "")
+                msg.innerHTML = '<span style="color: red;">Email is required</span>';
+            else if (Password === "")
+                msg.innerHTML = '<span style="color: red;">Password is required</span>';
+            else if (ConfirmPassword !== Password)
+                msg.innerHTML = '<span style="color: red;">Password Mismatch</span>';
+            else {
+                msg.innerHTML = '<span style="color: green;">Form submitted successfully</span>';
+                users.push({ firstname: FirstName, lastname: LastName, Email: Email });
+                displaydata();
+                clearform();
+            }
+        }
+
+        function clearform() {
+            document.getElementById("myform").reset();
+            arrayindex = -1;
+        }
+
+        function displaydata() {
+            var row = "";
+            for (let i = 0; i < users.length; i++) {
+                row += "<tr><td>" + users[i].firstname + "</td><td>" +
+                    users[i].lastname + "</td><td>" +
+                    users[i].Email + "</td><td><button onclick='EditUser(" + i + ")'>Edit</button></td></tr>" + "<button onclick='DeleteUser(" + i + ")'>Delete</button></td></tr>";
+            }
+            document.getElementById('table-body').innerHTML = row;
+        }
+
+        function EditUser(i) {
+            document.getElementById("first_name").value = users[i].firstname;
+            document.getElementById("last_name").value = users[i].lastname;
+            document.getElementById("my_email").value = users[i].Email;
+            arrayindex = i;
+
+            // Optional: Scroll to form
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function updateuser() {
+            if (arrayindex === -1) {
+                alert("Please select a user to update.");
+                return;
+            }
+
+            users[arrayindex].firstname = document.getElementById("first_name").value;
+            users[arrayindex].lastname = document.getElementById("last_name").value;
+            users[arrayindex].Email = document.getElementById("my_email").value;
+
+            displaydata();
+            clearform();
+            document.getElementById("displaymsg").innerHTML = '<span style="color: green;">User updated successfully</span>';
+        }
+
+        function showAlertMessage() {
+            alert("Hello! This is an alert message.");
+        }
+
+        setTimeout(showAlertMessage, 4000);
+
+        let myarray = [12, 23, 34, 45, 56, 67, 78, 89, 90];
+        let slicearray = myarray.slice(1, 1);
+        console.log(slicearray);
+
+        function DeleteUser(i) {
+            users.splice(i, 1);
+            displaydata();
+            document.getElementById("displaymsg").innerHTML = '<span style="color: red;">User deleted successfully</span>';
+        }
+
+        "use strict"
+        let b;
+        b = 10
+        console.log(b);
+
+
+        async function f1() {
+            alert("function 1")
+            
+        }
+
+        async function f2() {
+            alert("function 2")
+            
+        }
+
+        async function f3() {
+            alert("function 3")
+            
+        }
+
+        await f1();
+        await f2();
+        await f3();
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

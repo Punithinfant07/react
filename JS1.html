@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <h1>
+        This is a javascript file
+    </h1>
+    <form class="form-group">
+        <label for="name">first name :</label>
+        <input type="text" class="form-control" id="firstname" placeholder="Enter your first name">
+        <label for="Email">Last name :</label>
+        <input type="text" class="form-control" id="lastname" placeholder="enter your last name">
+        <button type="submit" class="btn btn-primary" onclick="displayname()">Submit</button>
+    </form>
+    <div id="form-data"></div>
+
+
+    <script>
+    
+
+        function displayname() {
+            event.preventDefault();
+            const firstname=document.getElementById("firstname").value;
+            const lastname=document.getElementById("lastname").value;
+            console.log(firstname,lastname);
+            //document.getElementById("form-data").innerHTML = '<p>welcome ${firstname} ${lastname} </p>';
+            //document.getElementById("form-data").innertext = '<p>welcome ${firstname} ${lastname} </p>';
+        }
+
+        function askName(){
+            const name = prompt("What is your name?");
+            console.log("User entered name:",name);
+            document.write("Hello "+ name);
+        }
+
+        askName();
+    </script>
+</body>
+</html>

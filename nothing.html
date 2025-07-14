@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Validation</title>
+</head>
+
+<body>
+  <section>
+    <form>
+      First Name: <input type="text" name="firstname" id="first_name" required /> <br />
+      Last Name: <input type="text" name="lastname" id="last_name" required /> <br />
+      Email: <input type="email" id="email" required /> <br />
+      Password: <input type="password" id="pass" required minlength="6" /> <br />
+      Confirm Password: <input type="password" id="confpass" required minlength="6" /> <br />
+      <input type="button" value="Submit" onclick="validateForm()" />
+    </form>
+
+    <div id="displaymsg" style="margin-top: 10px;"></div>
+
+    <table border="1" style="margin-top: 20px;">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Data will be inserted here -->
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    const users = [];
+
+    function validateForm() {
+      const firstName = document.getElementById("first_name").value.trim();
+      const lastName = document.getElementById("last_name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("pass").value;
+      const confirmPassword = document.getElementById("confpass").value;
+      const msgDiv = document.getElementById("displaymsg");
+
+      if (firstName === "") {
+        msgDiv.innerHTML = '<span style="color: red;">First name is required</span>';
+      } else if (lastName === "") {
+        msgDiv.innerHTML = '<span style="color: red;">Last name is required</span>';
+      } else if (email === "") {
+        msgDiv.innerHTML = '<span style="color: red;">Email is required</span>';
+      } else if (password === "") {
+        msgDiv.innerHTML = '<span style="color: red;">Password is required</span>';
+      } else if (confirmPassword === "") {
+        msgDiv.innerHTML = '<span style="color: red;">Confirm password is required</span>';
+      } else if (password !== confirmPassword) {
+        msgDiv.innerHTML = '<span style="color: red;">Passwords do not match</span>';
+      } else {
+        msgDiv.innerHTML = '<span style="color: green;">Form submitted successfully</span>';
+        displayData(firstName, lastName, email);
+
+        // Clear form inputs
+        document.getElementById("first_name").value = "";
+        document.getElementById("last_name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("pass").value = "";
+        document.getElementById("confpass").value = "";
+      }
+    }
+
+    function displayData(fname, lname, email) {
+      users.push({ firstname: fname, lastname: lname, email: email });
+      let row = "";
+      for (let i = 0; i < users.length; i++) {
+        row += "<tr><td>" + users[i].firstname + "</td><td>" + users[i].lastname + "</td><td>" + users[i].email + "</td></tr>";
+      }
+      document.getElementById("table-body").innerHTML = row;
+    }
+  </script>
+</body>
+
+</html>

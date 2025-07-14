@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+}
+
+.list {
+    list-style-type: none;
+    display: inline-block;
+    border: double 2px;
+    padding: 6px;
+}
+
+.margin-class{
+    margin: 2px; 
+}
+.padding-class{
+    padding-top: 40px;
+    padding-left: 40px;
+}
+.flex-class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
